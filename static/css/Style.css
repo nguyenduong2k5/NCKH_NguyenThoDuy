@@ -39,11 +39,9 @@ body{
 .Light .on .IMG{
     background-image: url(../img/Light_Bulb_On.png);
 }
-
 .Light .off .IMG{
     background-image: url(../img/Light_Bulb_Off.png);
 }
-
 .Ceiling_fans .on .IMG{
     background-image: url(../img/Ceiling_fans_on.gif);
 }
@@ -61,4 +59,26 @@ body{
 }
 .Water_pumps .off .IMG{
     background-image: url(../img/Water_pumps_off.png);
+}
+.Air_Conditioning .on .IMG{
+    background-image: url(../img/Air_Conditioning_On.gif);
+}
+.Air_Conditioning .off .IMG{
+    background-image: url(../img/Air_Conditioning_Off.png);
+}
+
+
+.ON_OFF{
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    width: 43px;
+    height: 40px;
+}
+
+.ON .ON_OFF{
+    background-image: url(../img/Green.png);
+}
+
+.OFF .ON_OFF{
+    background-image: url(../img/RED.png);
 }

@@ -43,7 +43,6 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <div class="input-group">
-                                                    
                                                     <input type="text" value="{{CON_1.NAME}}" class="form-control" id="id_NAME" readonly>
                                                     <input type="text" value="{{CON_1.TYPE}}" class="form-control" id="id_TYPE" readonly>
                                                     <a href="#Monitor_and_Control_Area__1-{{forloop.counter}}" class="btn btn-success btn-outline-primary BTN_EDIT" data-btnid = "{{CON_1.id}}" data-bs-toggle="modal"><i class="fa-solid fa-pen-to-square"></i></a>
@@ -53,22 +52,46 @@
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-md-5">
+                                        <div class="col-md-4">
                                             <center id="TEMP__{{CON_1.id}}">
                                                 <div class="mt-2" id="IMG__{{CON_1.id}}">
-                                                    <div class="IMG col-md-4"></div>
+                                                    <div class="IMG col-md-4 mt-4"></div>
                                                 </div>
                                             </center>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             <center>
-                                                <button class="card_button mt-5 rounded-pill text-nowrap BUTTON_ON" data-id = "{{CON_1.id}}">Bật thiết bị</button>
+                                                <button class="card_button mt-2 rounded-pill text-nowrap BUTTON_ON" data-id = "{{CON_1.id}}">Bật thiết bị</button>
                                             </center>
+                                            <div class="input-group mt-2">
+                                                <input type="text" value="Quạt: " class="form-control" readonly>
+                                                <div class="input-group-text" id="QUAT__{{CON_1.id}}">
+                                                    <div class="ON_OFF col-md-4"></div>
+                                                </div>
+                                            </div>
+                                            <div class="input-group mt-2">
+                                                <input type="text" value="Bóng đèn: " class="form-control" readonly>
+                                                <div class="input-group-text" id="BongDen__{{CON_1.id}}">
+                                                    <div class="ON_OFF col-md-4"></div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-md-2">
+                                        <div class="col-md-4">
                                             <center>
-                                                <button class="card_button mt-5 rounded-pill text-nowrap BUTTON_OFF" data-id = "{{CON_1.id}}">Tắt thiết bị</button>
+                                                <button class="card_button mt-2 rounded-pill text-nowrap BUTTON_OFF" data-id = "{{CON_1.id}}">Tắt thiết bị</button>
                                             </center>
+                                            <div class="input-group mt-2">
+                                                <input type="text" value="Quạt trần: " class="form-control" readonly>
+                                                <div class="input-group-text" id="QuatTran__{{CON_1.id}}">
+                                                    <div class="ON_OFF col-md-4"></div>
+                                                </div>
+                                            </div>
+                                            <div class="input-group mt-2">
+                                                <input type="text" value="Điều hòa: " class="form-control" readonly>
+                                                <div class="input-group-text" id="DieuHoa__{{CON_1.id}}">
+                                                    <div class="ON_OFF col-md-4"></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -76,7 +99,6 @@
                                             <hr />
                                         </div>
                                     </div>
-
                                     <div id="Monitor_and_Control_Area__1-{{forloop.counter}}" class="modal fade">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
@@ -88,14 +110,15 @@
                                                     </div>
                                                     <div class="modal-body">					
                                                         <div class="form-group">
-                                                            <label>Tên thiết bị</label>
-                                                            <input name="NAME" value="{{CON_1.NAME}}" type="text" class="form-control" required>
+                                                            <label>Tên phòng</label>
+                                                            <input name="NAME" value="{{CON_1.NAME}}" type="text" class="form-control" required readonly>
                                                             <label>Loại thiết bị</label>
                                                             <select class="form-control" name="TYPE" value="{{CON_1.TYPE}}">
                                                                 <option value="Quạt">Quạt</option>
                                                                 <option value="Quạt trần">Quạt trần</option>
-                                                                <option value="Máy bơn nước">Máy bơn nước</option>
                                                                 <option value="Bóng đèn">Bóng đèn</option>
+                                                                {% comment %} <option value="Máy chiếu">Máy chiếu</option> {% endcomment %}
+                                                                <option value="Điều hòa">Điều hòa</option>
                                                             </select>
                                                         </div>				
                                                     </div>
@@ -136,7 +159,6 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <div class="input-group">
-                                                    
                                                     <input type="text" value="{{CON_2.NAME}}" class="form-control" id="id_NAME" readonly>
                                                     <input type="text" value="{{CON_2.TYPE}}" class="form-control" id="id_TYPE" readonly>
                                                     <a href="#Monitor_and_Control_Area__2-{{forloop.counter}}" class="btn btn-success btn-outline-primary BTN_EDIT" data-btnid = "{{CON_2.id}}" data-bs-toggle="modal"><i class="fa-solid fa-pen-to-square"></i></a>
@@ -146,22 +168,46 @@
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-md-5">
+                                        <div class="col-md-4">
                                             <center id="TEMP__{{CON_2.id}}">
                                                 <div class="mt-2" id="IMG__{{CON_2.id}}">
-                                                    <div class="IMG col-md-4"></div>
+                                                    <div class="IMG col-md-4 mt-4"></div>
                                                 </div>
                                             </center>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             <center>
-                                                <button class="card_button mt-5 rounded-pill text-nowrap BUTTON_ON" data-id = "{{CON_2.id}}">Bật thiết bị</button>
+                                                <button class="card_button mt-2 rounded-pill text-nowrap BUTTON_ON" data-id = "{{CON_2.id}}">Bật thiết bị</button>
                                             </center>
+                                            <div class="input-group mt-2">
+                                                <input type="text" value="Quạt: " class="form-control" readonly>
+                                                <div class="input-group-text" id="QUAT__{{CON_2.id}}">
+                                                    <div class="ON_OFF col-md-4"></div>
+                                                </div>
+                                            </div>
+                                            <div class="input-group mt-2">
+                                                <input type="text" value="Bóng đèn: " class="form-control" readonly>
+                                                <div class="input-group-text" id="BongDen__{{CON_2.id}}">
+                                                    <div class="ON_OFF col-md-4"></div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-md-2">
+                                        <div class="col-md-4">
                                             <center>
-                                                <button class="card_button mt-5 rounded-pill text-nowrap BUTTON_OFF" data-id = "{{CON_2.id}}">Tắt thiết bị</button>
+                                                <button class="card_button mt-2 rounded-pill text-nowrap BUTTON_OFF" data-id = "{{CON_2.id}}">Tắt thiết bị</button>
                                             </center>
+                                            <div class="input-group mt-2">
+                                                <input type="text" value="Quạt trần: " class="form-control" readonly>
+                                                <div class="input-group-text" id="QuatTran__{{CON_2.id}}">
+                                                    <div class="ON_OFF col-md-4"></div>
+                                                </div>
+                                            </div>
+                                            <div class="input-group mt-2">
+                                                <input type="text" value="Điều hòa: " class="form-control" readonly>
+                                                <div class="input-group-text" id="DieuHoa__{{CON_2.id}}">
+                                                    <div class="ON_OFF col-md-4"></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -169,26 +215,26 @@
                                             <hr />
                                         </div>
                                     </div>
-
                                     <div id="Monitor_and_Control_Area__2-{{forloop.counter}}" class="modal fade">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <form action="/update/{{CON_2.id}}" method="post">
                                                     {% csrf_token %}
-                                                    <div class="modal-header">						
+                                                    <div class="modal-header">
                                                         <h4 class="modal-title">Đổi tên thiết bị</h4>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                     </div>
-                                                    <div class="modal-body">					
+                                                    <div class="modal-body">
                                                         <div class="form-group">
-                                                            <label>Tên thiết bị</label>
-                                                            <input name="NAME" value="{{CON_2.NAME}}" type="text" class="form-control" required>
+                                                            <label>Tên phòng</label>
+                                                            <input name="NAME" value="{{CON_2.NAME}}" type="text" class="form-control" required readonly>
                                                             <label>Loại thiết bị</label>
                                                             <select class="form-control" name="TYPE" value="{{CON_2.TYPE}}">
                                                                 <option value="Quạt">Quạt</option>
                                                                 <option value="Quạt trần">Quạt trần</option>
-                                                                <option value="Máy bơn nước">Máy bơn nước</option>
                                                                 <option value="Bóng đèn">Bóng đèn</option>
+                                                                {% comment %} <option value="Máy chiếu">Máy chiếu</option> {% endcomment %}
+                                                                <option value="Điều hòa">Điều hòa</option>
                                                             </select>
                                                         </div>				
                                                     </div>
@@ -206,11 +252,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
         </div>
     </div>
 </body>
